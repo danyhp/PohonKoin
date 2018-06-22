@@ -1,0 +1,59 @@
+{
+  "project_info": {
+    "project_number": "238849900331",
+    "firebase_url": "https://pohonkoin-41e76.firebaseio.com",
+    "project_id": "pohonkoin-41e76",
+    "storage_bucket": "pohonkoin-41e76.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:238849900331:android:2dd4a1d01cdd6952",
+        "android_client_info": {
+          "package_name": "com.mmithb.danyhp.pohonkoin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "238849900331-n54n8ajsc7mcab359ae5ua0855m2vv0h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mmithb.danyhp.pohonkoin",
+            "certificate_hash": "69d30cc4c6d27d087d16f7b6770dd4838dff64de"
+          }
+        },
+        {
+          "client_id": "238849900331-sldpbvb1sa9q2eitlehdtv4u8s1duvoa.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "238849900331-sldpbvb1sa9q2eitlehdtv4u8s1duvoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2JTF1j0e6iOIXZAs4IpqQjne_CUzZL-0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "238849900331-sldpbvb1sa9q2eitlehdtv4u8s1duvoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
