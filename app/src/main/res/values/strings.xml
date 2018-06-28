@@ -17,4 +17,19 @@
     <string name="TXT_CREATE_ACCOUNT">Create Account</string>
     <string name="TXT_FORGOT_PASSWORD">Forgot Password</string>
     <string name="pohonkoin_copyright">POHONKOIN ©</string>
+    <string name="action_save">Save</string>
+    <string name="email">Email</string>
+    <string name="name">Name</string>
+    <string name="koin_putih_label">Koin Putih</string>
+    <string name="koin_hijau_label">Koin Hijau</string>
+    <string name="koin_merah_label">Koin Merah</string>
+    <string name="merchant_login_button">Merchant Login</string>
+    <string name="bulletin_label_button">Bulletin</string>
+    <string name="settings_label_button">Settings</string>
+    <string name="koin_history_label">Koin History</string>
+    <string name="merchant_koin_label">Merchant Koin</string>
+    <string name="send_koin_label">Send Koin</string>
+    <string name="receive_koin_label">Receive Koin</string>
+    <string name="create_tree_label">Create Tree</string>
+    <string name="created_tree_label">Created Tree</string>
 </resources>
