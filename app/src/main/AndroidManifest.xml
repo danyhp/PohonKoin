@@ -19,16 +19,20 @@
             android:name=".login"
             android:label="@string/title_activity_login"
             android:theme="@style/NoTitleBar"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".profile">
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity android:name=".profile"></activity>
+        <activity android:name=".home" />
+        <!-- <activity android:name=".koin"></activity> -->
+        <activity android:name=".GoogleLogin">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home" />
-        <activity android:name=".koin"></activity>
     </application>
 
 </manifest>

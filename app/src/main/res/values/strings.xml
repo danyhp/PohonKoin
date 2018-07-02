@@ -32,4 +32,10 @@
     <string name="receive_koin_label">Receive Koin</string>
     <string name="create_tree_label">Create Tree</string>
     <string name="created_tree_label">Created Tree</string>
+
+
+    <!-- Button text -->
+    <string name="btn_logout_from_google">Logout from Google</string>
+    <string name="btn_revoke_access">Revoke Access</string>
+    <string name="loading">Please Wait</string>
 </resources>
