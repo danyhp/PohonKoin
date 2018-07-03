@@ -27,10 +27,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MerchantLoginActivity" />
+        <activity
+            android:name=".MerchantLoginActivity"
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".MainPageActivity"
             android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".KoinPageActivity"
+            android:theme="@style/NoTitleBar"></activity>
     </application>
 
 </manifest>
