@@ -1,8 +1,8 @@
 package com.mmithb.danyhp.pohonkoin;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         if (firebaseAuth.getCurrentUser() == null) {
             finish();
 
-            Intent intent = new Intent(MainActivity.this, login.class);
+            Intent intent = new Intent(MainActivity.this, EmailLoginActivity.class);
             startActivity(intent);
 
             Toast.makeText(this, "Please Log in to continue", Toast.LENGTH_LONG).show();
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 firebaseAuth.signOut();
                 finish();
 
-                Intent intent = new Intent(MainActivity.this, login.class);
+                Intent intent = new Intent(MainActivity.this, EmailLoginActivity.class);
                 startActivity(intent);
 
                 Toast.makeText(MainActivity.this, "Logged Out Successfully", Toast.LENGTH_SHORT).show();

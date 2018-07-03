@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mmithb.danyhp.pohonkoin">
 
-    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <!-- To auto-complete the email text field in the EmailLoginActivity form with the user's emails -->
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
@@ -16,23 +16,22 @@
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity" />
         <activity
-            android:name=".login"
+            android:name=".EmailLoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/NoTitleBar"
-            android:windowSoftInputMode="adjustPan">
-
-        </activity>
-        <activity android:name=".profile"></activity>
-        <activity android:name=".home" />
-        <!-- <activity android:name=".koin"></activity> -->
-        <activity android:name=".GoogleLogin">
-
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".GoogleLoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MerchantLoginActivity" />
+        <activity
+            android:name=".MainPageActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity android:name=".EmailLoginActivity"></activity>
     </application>
 
 </manifest>
