@@ -3,23 +3,21 @@ package com.mmithb.danyhp.pohonkoin;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
-import android.app.ProgressDialog;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
 import android.app.LoaderManager.LoaderCallbacks;
-
+import android.app.ProgressDialog;
 import android.content.CursorLoader;
+import android.content.Intent;
 import android.content.Loader;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.AsyncTask;
-
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.ContactsContract;
+import android.support.annotation.NonNull;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -48,7 +46,6 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
     EditText password;
     String emailHolder, passwordHolder;
     Button login, signUp;
-    boolean EditTextEmptyCheck;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
 
@@ -80,9 +77,9 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
         setContentView(R.layout.activity_email_login);
 
 
-        email = (AutoCompleteTextView) findViewById(R.id.email);
+        email = findViewById(R.id.email);
         populateAutoComplete();
-        password = (EditText) findViewById(R.id.password);
+        password = findViewById(R.id.password);
 
 //        password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
 //            @Override
@@ -96,7 +93,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
 //        });
 
 
-        login = (Button) findViewById(R.id.email_sign_in_button);
+        login = findViewById(R.id.email_sign_in_button);
         login.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -104,7 +101,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
             }
         });
 
-        signUp = (Button) findViewById(R.id.create_account_button);
+        signUp = findViewById(R.id.create_account_button);
 
         progressDialog = new ProgressDialog(EmailLoginActivity.this);
         firebaseAuth = FirebaseAuth.getInstance();

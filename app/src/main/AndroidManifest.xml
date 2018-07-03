@@ -31,7 +31,6 @@
         <activity
             android:name=".MainPageActivity"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".EmailLoginActivity"></activity>
     </application>
 
 </manifest>
