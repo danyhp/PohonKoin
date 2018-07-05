@@ -38,7 +38,8 @@
             android:theme="@style/NoTitleBar" />
         <activity android:name=".SendKoinActivity" />
         <activity android:name=".CreateTreeActivity" />
-        <activity android:name=".ReceiveKoinActivity"></activity>
+        <activity android:name=".ReceiveKoinActivity" />
+        <activity android:name=".CreatedTreeActivity"></activity>
     </application>
 
 </manifest>
