@@ -42,4 +42,12 @@
     <string name="merchant_signup">Want to be our Merchant?</string>
     <string name="textView">Please scan the main tree QR code to start your tree</string>
     <string name="Scan">Scan Image from Gallery</string>
+    <string name="filldata">Fill your data below, we will contact  your WA number soon to verify</string>
+    <string name="Place">Place</string>
+    <string name="idcard">Identity Card Number</string>
+    <string name="age">Age</string>
+    <string name="WANumber">WA Number</string>
+    <string name="Click">Click sign up below means Agree with our rule</string>
+    <string name="signUp">Sign Up</string>
+    <string name="ahmad">Ahmad</string>
 </resources>
