@@ -13,31 +13,73 @@
         android:stretchColumns="*">
 
         <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style=""
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_span="2"
+                android:gravity="center_vertical"
+                android:text="Total Koin Putih 12,549 Koin "
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="18dp" />
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/row0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Send Koin"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Receive Koin"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+        <TableRow
             android:id="@+id/row1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/simpleTextView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#FF0000"
-                android:padding="18dp"
-                android:text="Text 2"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Create Tree"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="14dp" />
+                android:textSize="16dp" />
 
             <TextView
-                android:id="@+id/simpleTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:background="#b0b0b0"
-                android:padding="18dp"
-                android:text="Text 1"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Created Tree"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="14dp" />
+                android:textSize="16dp" />
 
         </TableRow>
 
@@ -49,12 +91,12 @@
                 style=""
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
-                android:layout_weight="2"
+                android:layout_span="2"
                 android:gravity="center_vertical"
                 android:text="Merchant Koin"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="14dp" />
+                android:textSize="16dp" />
         </TableRow>
 
         <TableRow
@@ -64,11 +106,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="2"
-                android:padding="8dp"
+                android:layout_span="2"
+                android:height="40dp"
+                android:gravity="center_vertical"
                 android:text="Koin History"
                 android:textAlignment="center"
-                android:textColor="#000" />
+                android:textColor="#000"
+                android:textSize="16dp" />
         </TableRow>
 
 
