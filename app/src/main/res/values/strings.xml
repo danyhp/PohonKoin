@@ -40,4 +40,6 @@
     <string name="loading">Please Wait</string>
     <string name="prompt_merchant_id">Merchant ID</string>
     <string name="merchant_signup">Want to be our Merchant?</string>
+    <string name="textView">Please scan the main tree QR code to start your tree</string>
+    <string name="Scan">Scan Image from Gallery</string>
 </resources>
