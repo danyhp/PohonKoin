@@ -35,7 +35,8 @@
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".KoinPageActivity"
-            android:theme="@style/NoTitleBar"></activity>
+            android:theme="@style/NoTitleBar" />
+        <activity android:name=".SendKoinActivity"></activity>
     </application>
 
 </manifest>
