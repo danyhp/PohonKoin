@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KoinHistory">
+
+    <TableLayout
+        android:id="@+id/table_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:stretchColumns="*">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Date"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="DEBET"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="KREDIT"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Status"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TableLayout
+        android:id="@+id/total_koin_display"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:layout_below="@id/table_koin"
+        android:gravity="bottom"
+        android:stretchColumns="*">
+
+
+        <TableRow
+            android:id="@+id/row1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="Balance Koin"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/koin_total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="50dp"
+                android:gravity="center_vertical"
+                android:text="59,967"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+
+        </TableRow>
+
+
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/pohonkoin_copyright"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>

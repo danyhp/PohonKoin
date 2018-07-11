@@ -40,7 +40,8 @@
         <activity android:name=".CreateTreeActivity" />
         <activity android:name=".ReceiveKoinActivity" />
         <activity android:name=".SignupMerchantActivity" />
-        <activity android:name=".MerchantActivity"></activity>
+        <activity android:name=".MerchantActivity" />
+        <activity android:name=".KoinHistory"></activity>
     </application>
 
 </manifest>
