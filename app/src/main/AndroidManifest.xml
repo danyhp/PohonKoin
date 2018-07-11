@@ -39,7 +39,8 @@
         <activity android:name=".SendKoinActivity" />
         <activity android:name=".CreateTreeActivity" />
         <activity android:name=".ReceiveKoinActivity" />
-        <activity android:name=".SignupMerchantActivity"></activity>
+        <activity android:name=".SignupMerchantActivity" />
+        <activity android:name=".MerchantActivity"></activity>
     </application>
 
 </manifest>
