@@ -110,7 +110,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
 
         if (firebaseAuth.getCurrentUser() != null) {
             finish();
-            Intent intent = new Intent(EmailLoginActivity.this, MainActivity.class);
+            Intent intent = new Intent(EmailLoginActivity.this, ProfileActivity.class);
             startActivity(intent);
         }
 
@@ -170,9 +170,6 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
      * errors are presented and no actual EmailLoginActivity attempt is made.
      */
     private void attemptLogin() {
-//        if (mAuthTask != null) {
-//            return;
-//        }
 
         // Reset errors.
         email.setError(null);
@@ -216,9 +213,6 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
             // perform the user EmailLoginActivity attempt.
 
             LoginFunction();
-//            showProgress(true);
-//            mAuthTask = new UserLoginTask(emailHolder, passwordHolder);
-//            mAuthTask.execute((Void) null);
         }
     }
 
@@ -336,7 +330,6 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
 
         @Override
         protected Boolean doInBackground(Void... params) {
-            // TODO: attempt authentication against a network service.
 
             try {
                 // Simulate network access.
@@ -390,7 +383,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
                             progressDialog.dismiss();
                             finish();
 
-                            Intent intent = new Intent(EmailLoginActivity.this, MainActivity.class);
+                            Intent intent = new Intent(EmailLoginActivity.this, ProfileActivity.class);
                             startActivity(intent);
                         } else {
                             progressDialog.dismiss();
