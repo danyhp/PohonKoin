@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">PohonKoin</string>
-    <string name="title_activity_login">Sign in</string>
 
     <!-- Strings related to EmailLoginActivity -->
     <string name="prompt_email">Email</string>
