@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -19,7 +20,7 @@ public class ProfileActivity extends AppCompatActivity {
 
     private Button btnChangeEmail, btnChangePassword, btnSendResetEmail, btnRemoveUser,
             changeEmail, changePassword, sendEmail, remove, signOut;
-
+    private TextView userEmailShow;
     private EditText oldEmail, newEmail, password, newPassword;
     private ProgressBar progressBar;
     private FirebaseAuth.AuthStateListener authListener;
@@ -53,6 +54,7 @@ public class ProfileActivity extends AppCompatActivity {
             }
         };
 
+
         btnChangeEmail = (Button) findViewById(R.id.change_email_button);
         btnChangePassword = (Button) findViewById(R.id.change_password_button);
         btnSendResetEmail = (Button) findViewById(R.id.sending_pass_reset_button);
@@ -67,6 +69,9 @@ public class ProfileActivity extends AppCompatActivity {
         newEmail = (EditText) findViewById(R.id.new_email);
         password = (EditText) findViewById(R.id.password);
         newPassword = (EditText) findViewById(R.id.newPassword);
+        userEmailShow = findViewById(R.id.user_email);
+
+        userEmailShow.setText("Successfully Logged In, Your Email = " + user.getEmail());
 
         oldEmail.setVisibility(View.GONE);
         newEmail.setVisibility(View.GONE);
