@@ -45,7 +45,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
     AutoCompleteTextView email;
     EditText password;
     String emailHolder, passwordHolder;
-    Button login, signUp;
+    Button login, signUp, forgotpass;
     ProgressDialog progressDialog;
     FirebaseAuth firebaseAuth;
 
@@ -81,18 +81,6 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
         populateAutoComplete();
         password = findViewById(R.id.password);
 
-//        password.setOnEditorActionListener(new TextView.OnEditorActionListener() {
-//            @Override
-//            public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
-//                if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-//                    attemptLogin();
-//                    return true;
-//                }
-//                return false;
-//            }
-//        });
-
-
         login = findViewById(R.id.email_sign_in_button);
         login.setOnClickListener(new OnClickListener() {
             @Override
@@ -102,6 +90,20 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
         });
 
         signUp = findViewById(R.id.create_account_button);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EmailLoginActivity.this, CreateAccountActivity.class));
+            }
+        });
+
+        forgotpass = findViewById(R.id.forgot_password_button);
+        forgotpass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(EmailLoginActivity.this, ResetPasswordActivity.class));
+            }
+        });
 
         progressDialog = new ProgressDialog(EmailLoginActivity.this);
         firebaseAuth = FirebaseAuth.getInstance();
@@ -114,6 +116,8 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+
     }
 
     private void populateAutoComplete() {
@@ -219,12 +223,10 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
     }
 
     private boolean isEmailValid(String email) {
-        //TODO: Replace this with your own logic
         return email.contains("@");
     }
 
     private boolean isPasswordValid(String password) {
-        //TODO: Replace this with your own logic
         return password.length() > 4;
     }
 

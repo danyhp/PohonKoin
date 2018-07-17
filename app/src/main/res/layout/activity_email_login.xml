@@ -82,35 +82,40 @@
 
                 <Button
                     android:id="@+id/email_sign_in_button"
-                    style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/login_button_horizontal_margin"
                     android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="40dp"
+                    android:background="@color/colorAccent"
                     android:text="@string/action_sign_in"
+                    android:textColor="@android:color/black"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/create_account_button"
-                    style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/login_button_horizontal_margin"
                     android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="@dimen/login_button_vertical_margin"
+                    android:background="@null"
                     android:text="@string/TXT_CREATE_ACCOUNT"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/forgot_password_button"
-                    style="?android:textAppearanceSmall"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/login_button_horizontal_margin"
                     android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="@dimen/login_button_vertical_margin"
+                    android:background="@null"
                     android:text="@string/TXT_FORGOT_PASSWORD"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
                     android:textStyle="bold" />
 
 

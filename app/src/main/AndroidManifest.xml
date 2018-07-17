@@ -19,14 +19,14 @@
             android:name=".EmailLoginActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/NoTitleBar"
-            android:windowSoftInputMode="adjustPan" />
-        <activity android:name=".GoogleLoginActivity">
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".GoogleLoginActivity" />
         <activity
             android:name=".MerchantLoginActivity"
             android:theme="@style/NoTitleBar" />
@@ -41,7 +41,19 @@
         <activity android:name=".ReceiveKoinActivity" />
         <activity android:name=".SignupMerchantActivity" />
         <activity android:name=".MerchantActivity" />
-        <activity android:name=".KoinHistory"></activity>
+        <activity android:name=".KoinHistory" />
+        <activity
+            android:name=".CreateAccountActivity"
+            android:theme="@style/NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ResetPasswordActivity"
+            android:theme="@style/NoTitleBar"></activity>
     </application>
 
 </manifest>
