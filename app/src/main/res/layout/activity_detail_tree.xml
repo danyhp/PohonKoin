@@ -93,7 +93,7 @@
                     android:text="Tree QR Code"
                     android:textAlignment="center"
                     android:textSize="16sp"
-                    android:height="25dp"/>
+                    android:height="24dp"/>
 
             </TableRow>
 
