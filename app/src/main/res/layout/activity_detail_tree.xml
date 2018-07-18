@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailTree">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="top"
+        android:stretchColumns="*">
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:height="25dp"
+                android:gravity="center"
+                android:text="KWUNWOCYFW Tree"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16sp" />
+
+        </TableRow>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="top"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp">
+
+                <TextView
+                    android:layout_span="1"
+                    android:gravity="center"
+                    android:text="Level"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_span="2"
+                    android:gravity="center"
+                    android:text="Koin\nCollected"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_span="1"
+                    android:gravity="center"
+                    android:text="Total\nRoot"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="16sp" />
+
+                <TextView />
+
+                <TextView />
+
+            </TableRow>
+
+        </TableLayout>
+    </TableLayout>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/footer"
+        android:gravity="bottom"
+        android:stretchColumns="*">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="Tree QR Code"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:height="25dp"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:stretchColumns="*">
+
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="40dp">
+
+                <TextView
+                    android:text="Total"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textColor="#000"
+                    android:layout_span="1"/>
+
+                <TextView
+                    android:text="5,132"
+                    android:gravity="right"
+                    android:textColor="#000"
+                    android:textSize="16sp"
+                    android:layout_span="1"/>
+
+                <TextView
+                    android:text="3,414,562"
+                    android:textSize="16sp"
+                    android:gravity="right"
+                    android:textColor="#000"
+                    android:layout_span="2"/>
+
+                <TextView />
+                <TextView />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                style=""
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_span="2"
+                android:gravity="center_vertical"
+                android:text="Last Update = 17 July 2017 10:32 (GMT +7)"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="12dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_span="2"
+                android:height="30dp"
+                android:gravity="center_vertical"
+                android:text="125 Hours Remaining"
+                android:textAlignment="center"
+                android:textColor="#000"
+                android:textSize="16dp" />
+        </TableRow>
+
+
+    </TableLayout>
+
+
+    <LinearLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:text="@string/pohonkoin_copyright"
+            android:textAlignment="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
