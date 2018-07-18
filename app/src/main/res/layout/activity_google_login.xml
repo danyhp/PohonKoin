@@ -7,7 +7,7 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
-        android:id="@+id/llProfile"
+        android:id="@+id/ll_profile"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"

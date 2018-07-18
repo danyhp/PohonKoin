@@ -27,7 +27,7 @@
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:id="@+id/llProfile"
+                    android:id="@+id/ll_profile"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="20dp"
@@ -35,7 +35,7 @@
                     android:weightSum="3">
 
                     <ImageView
-                        android:id="@+id/imgProfilePic"
+                        android:id="@+id/img_profile_pic"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1" />
@@ -48,14 +48,14 @@
                         android:orientation="vertical">
 
                         <TextView
-                            android:id="@+id/txtName"
+                            android:id="@+id/txt_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"
                             android:textSize="20sp" />
 
                         <TextView
-                            android:id="@+id/txtEmail"
+                            android:id="@+id/txt_email"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:padding="5dp"

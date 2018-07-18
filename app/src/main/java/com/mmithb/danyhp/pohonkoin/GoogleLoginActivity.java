@@ -46,7 +46,7 @@ public class GoogleLoginActivity extends AppCompatActivity implements GoogleApiC
         btnSignIn = findViewById(R.id.btn_sign_in);
         btnSignOut = findViewById(R.id.btn_sign_out);
         btnRevokeAccess = findViewById(R.id.btn_revoke_access);
-        llProfileLayout = findViewById(R.id.llProfile);
+        llProfileLayout = findViewById(R.id.ll_profile);
         txtName = findViewById(R.id.txtName);
         txtEmail = findViewById(R.id.txtEmail);
         imgProfilePic = findViewById(R.id.imgProfilePic);

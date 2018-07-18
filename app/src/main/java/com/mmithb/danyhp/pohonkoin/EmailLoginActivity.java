@@ -110,7 +110,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
 
         if (firebaseAuth.getCurrentUser() != null) {
             finish();
-            Intent intent = new Intent(EmailLoginActivity.this, ProfileActivity.class);
+            Intent intent = new Intent(EmailLoginActivity.this, MainPageActivity.class);
             startActivity(intent);
         }
 
@@ -383,7 +383,7 @@ public class EmailLoginActivity extends AppCompatActivity implements LoaderCallb
                             progressDialog.dismiss();
                             finish();
 
-                            Intent intent = new Intent(EmailLoginActivity.this, ProfileActivity.class);
+                            Intent intent = new Intent(EmailLoginActivity.this, MainPageActivity.class);
                             startActivity(intent);
                         } else {
                             progressDialog.dismiss();

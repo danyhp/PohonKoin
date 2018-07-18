@@ -5,17 +5,30 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainPageActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private TextView koinPutihValue, koinHijauValue, koinMerahValue;
+    private TextView koinPutihValue, koinHijauValue, koinMerahValue, emailTxt, nameTxt;
     private Button bulletinBtn, settingBtn, merchantBtn, koinPutihBtn, koinHijauBtn, koinMerahBtn;
+    private LinearLayout profileLink;
+    private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+
+        //get firebase auth instance
+        auth = FirebaseAuth.getInstance();
+
+        //get current user
+        final FirebaseUser user = auth.getCurrentUser();
+
 
         koinPutihValue = findViewById(R.id.jml_koin_putih);
         koinPutihValue.setOnClickListener(this);
@@ -40,6 +53,15 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
         settingBtn = findViewById(R.id.btn_setting);
         settingBtn.setOnClickListener(this);
+
+        profileLink = findViewById(R.id.ll_profile);
+        profileLink.setOnClickListener(this);
+
+        emailTxt = findViewById(R.id.txt_email);
+        nameTxt = findViewById(R.id.txt_name);
+
+        emailTxt.setText(user.getEmail());
+
 
     }
 
@@ -66,6 +88,10 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
             case R.id.btn_setting:
                 startActivity(new Intent(MainPageActivity.this, SettingsActivity.class));
+                break;
+
+            case R.id.ll_profile:
+                startActivity(new Intent(MainPageActivity.this, ProfileActivity.class));
                 break;
 
             default:
