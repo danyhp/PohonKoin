@@ -43,11 +43,13 @@
         <activity android:name=".KoinHistory" />
         <activity
             android:name=".CreateAccountActivity"
-            android:theme="@style/NoTitleBar"></activity>
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".ResetPasswordActivity"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".ProfileActivity" />
+        <activity android:name=".BulletinActivity" />
+        <activity android:name=".SettingsActivity"></activity>
     </application>
 
 </manifest>
