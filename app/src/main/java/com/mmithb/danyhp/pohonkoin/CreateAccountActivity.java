@@ -1,5 +1,6 @@
 package com.mmithb.danyhp.pohonkoin;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -21,6 +22,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     private EditText inputEmail, inputPassword;
     private Button btnSignIn, btnSignUp, btnResetPassword;
     private ProgressBar progressBar;
+    private ProgressDialog progressDialog;
     private FirebaseAuth auth;
 
     @Override
@@ -74,14 +76,17 @@ public class CreateAccountActivity extends AppCompatActivity {
                     return;
                 }
 
-                progressBar.setVisibility(View.VISIBLE);
+//                progressBar.setVisibility(View.VISIBLE);
+                progressDialog.setMessage("Please Wait");
+                progressDialog.show();
                 //create user
                 auth.createUserWithEmailAndPassword(email, password)
                         .addOnCompleteListener(CreateAccountActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Toast.makeText(CreateAccountActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-                                progressBar.setVisibility(View.GONE);
+//                                progressBar.setVisibility(View.GONE);
+                                progressDialog.dismiss();
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
                                 // signed in user can be handled in the listener.
@@ -102,6 +107,7 @@ public class CreateAccountActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        progressBar.setVisibility(View.GONE);
+//        progressBar.setVisibility(View.GONE);
+        progressDialog.dismiss();
     }
 }

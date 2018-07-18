@@ -99,11 +99,6 @@
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
-        <ProgressBar
-            android:id="@+id/progressBar"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:visibility="gone" />
 
         <Button
             android:id="@+id/remove"
@@ -115,6 +110,14 @@
             android:text="@string/btn_remove"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
 
         <Button
             android:id="@+id/change_email_button"
