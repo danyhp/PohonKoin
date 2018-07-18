@@ -17,7 +17,6 @@
         <activity android:name=".MainActivity" />
         <activity
             android:name=".EmailLoginActivity"
-            android:label="@string/title_activity_login"
             android:theme="@style/NoTitleBar"
             android:windowSoftInputMode="adjustPan">
             <intent-filter>
