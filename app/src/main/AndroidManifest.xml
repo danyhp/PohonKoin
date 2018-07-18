@@ -47,7 +47,8 @@
         <activity
             android:name=".ResetPasswordActivity"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".ProfileActivity" />
+        <activity android:name=".ProfileActivity"
+            android:theme="@style/NoTitleBar"/>
         <activity android:name=".BulletinActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".QRCodeSendKoinActivity"></activity>
