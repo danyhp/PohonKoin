@@ -9,7 +9,6 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -21,7 +20,6 @@ public class CreateAccountActivity extends AppCompatActivity {
 
     private EditText inputEmail, inputPassword;
     private Button btnSignIn, btnSignUp, btnResetPassword;
-    private ProgressBar progressBar;
     private ProgressDialog progressDialog;
     private FirebaseAuth auth;
 
@@ -37,7 +35,7 @@ public class CreateAccountActivity extends AppCompatActivity {
         btnSignUp = (Button) findViewById(R.id.sign_up_button);
         inputEmail = (EditText) findViewById(R.id.email);
         inputPassword = (EditText) findViewById(R.id.password);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressDialog = new ProgressDialog(this);
         btnResetPassword = (Button) findViewById(R.id.btn_reset_password);
 
         btnResetPassword.setOnClickListener(new View.OnClickListener() {

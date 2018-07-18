@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,7 +22,6 @@ public class ProfileActivity extends AppCompatActivity {
             changeEmail, changePassword, sendEmail, remove, signOut;
     private TextView userEmailShow;
     private EditText oldEmail, newEmail, password, newPassword;
-    private ProgressBar progressBar;
     private ProgressDialog progressDialog;
     private FirebaseAuth.AuthStateListener authListener;
     private FirebaseAuth auth;
@@ -86,11 +84,11 @@ public class ProfileActivity extends AppCompatActivity {
         sendEmail.setVisibility(View.GONE);
         remove.setVisibility(View.GONE);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
-
-        if (progressBar != null) {
-            progressBar.setVisibility(View.GONE);
-        }
+//        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+//
+//        if (progressBar != null) {
+//            progressBar.setVisibility(View.GONE);
+//        }
 
         btnChangeEmail.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -131,7 +129,8 @@ public class ProfileActivity extends AppCompatActivity {
                             });
                 } else if (newEmail.getText().toString().trim().equals("")) {
                     newEmail.setError("Enter email");
-                    progressBar.setVisibility(View.GONE);
+                    progressDialog.dismiss();
+//                    progressBar.setVisibility(View.GONE);
                 }
             }
         });
