@@ -17,14 +17,15 @@
             android:layout_height="wrap_content">
 
             <TextView
-                style=""
+                android:id="@+id/txt_koin_display"
+                style="@style/TextContent.LabelKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="80dp"
                 android:layout_span="2"
+                android:background="@color/colorPrimary"
                 android:gravity="center_vertical"
                 android:text="Total Koin Putih 12,549 Koin "
                 android:textAlignment="center"
-                android:textColor="#000"
                 android:textSize="18dp" />
         </TableRow>
 
@@ -34,7 +35,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <Button
+                android:id="@+id/btn_send_koin"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:height="50dp"
@@ -44,7 +47,9 @@
                 android:textColor="#000"
                 android:textSize="16dp" />
 
-            <TextView
+            <Button
+                android:id="@+id/btn_receive_koin"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:height="50dp"
@@ -61,7 +66,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <Button
+                android:id="@+id/btn_create_tree"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:height="50dp"
@@ -71,7 +78,9 @@
                 android:textColor="#000"
                 android:textSize="16dp" />
 
-            <TextView
+            <Button
+                android:id="@+id/btn_created_tree"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:height="50dp"
@@ -87,15 +96,17 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                style=""
+            <Button
+                android:id="@+id/btn_merchant_koin"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:layout_span="2"
+                android:background="@color/colorAccent"
                 android:gravity="center_vertical"
                 android:text="Merchant Koin"
                 android:textAlignment="center"
-                android:textColor="#000"
+                android:textColor="@android:color/black"
                 android:textSize="16dp" />
         </TableRow>
 
@@ -103,15 +114,18 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
-            <TextView
+            <Button
+                android:id="@+id/btn_koin_history"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_span="2"
                 android:height="40dp"
+                android:background="@color/colorAccent"
                 android:gravity="center_vertical"
                 android:text="Koin History"
                 android:textAlignment="center"
-                android:textColor="#000"
+                android:textColor="@android:color/black"
                 android:textSize="16dp" />
         </TableRow>
 
