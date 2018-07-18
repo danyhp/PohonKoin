@@ -82,23 +82,25 @@
 
                 <Button
                     android:id="@+id/btn_merchant_login"
-                    style="?android:textAppearanceSmall"
+                    style="@style/TextContent.BtnKoin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/login_button_horizontal_margin"
                     android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="40dp"
+                    android:background="@color/colorPrimary"
                     android:text="@string/action_sign_in"
                     android:textStyle="bold" />
 
                 <Button
-                    android:id="@+id/signup_merchant_button"
-                    style="?android:textAppearanceSmall"
+                    android:id="@+id/btn_signup_merchant"
+                    style="@style/TextContent.BtnKoin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="@dimen/login_button_horizontal_margin"
                     android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="@dimen/login_button_vertical_margin"
+                    android:background="@null"
                     android:text="@string/merchant_signup"
                     android:textStyle="bold" />
 

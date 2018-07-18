@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".EmailLoginActivity"
             android:theme="@style/NoTitleBar"
@@ -25,32 +27,55 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".GoogleLoginActivity" />
+        <activity
+            android:name=".GoogleLoginActivity"
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".MerchantLoginActivity"
-            android:theme="@style/NoTitleBar" />
+            android:theme="@style/NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainPageActivity"
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".KoinPageActivity"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".SendKoinActivity" />
-        <activity android:name=".CreateTreeActivity" />
-        <activity android:name=".ReceiveKoinActivity" />
-        <activity android:name=".SignupMerchantActivity" />
-        <activity android:name=".MerchantActivity" />
-        <activity android:name=".KoinHistory" />
+        <activity
+            android:name=".SendKoinActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".CreateTreeActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".ReceiveKoinActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".SignupMerchantActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".MerchantActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".KoinHistory"
+            android:theme="@style/NoTitleBar" />
         <activity
             android:name=".CreateAccountActivity"
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".ResetPasswordActivity"
             android:theme="@style/NoTitleBar" />
-        <activity android:name=".ProfileActivity" />
-        <activity android:name=".BulletinActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".QRCodeSendKoinActivity"></activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".BulletinActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".SettingsActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".QRCodeSendKoinActivity"
+            android:theme="@style/NoTitleBar" />
     </application>
 
 </manifest>
