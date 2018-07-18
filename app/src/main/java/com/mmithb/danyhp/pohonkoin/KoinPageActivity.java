@@ -1,5 +1,6 @@
 package com.mmithb.danyhp.pohonkoin;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -44,21 +45,27 @@ public class KoinPageActivity extends AppCompatActivity implements View.OnClickL
         switch (v.getId()) {
 
             case R.id.btn_send_koin:
+                startActivity(new Intent(KoinPageActivity.this, SendKoinActivity.class));
                 break;
 
             case R.id.btn_receive_koin:
+                startActivity(new Intent(KoinPageActivity.this, ReceiveKoinActivity.class));
                 break;
 
             case R.id.btn_create_tree:
+                startActivity(new Intent(KoinPageActivity.this, CreateTreeActivity.class));
                 break;
 
             case R.id.btn_created_tree:
+                startActivity(new Intent(KoinPageActivity.this, CreatedTreeActivity.class));
                 break;
 
             case R.id.btn_merchant_koin:
+                startActivity(new Intent(KoinPageActivity.this, MerchantActivity.class));
                 break;
 
             case R.id.btn_koin_history:
+                startActivity(new Intent(KoinPageActivity.this, KoinHistory.class));
                 break;
 
             default:

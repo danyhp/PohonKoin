@@ -72,4 +72,5 @@
     <string name="remove_user">Remove User</string>
     <string name="btn_sign_out">Sign Out</string>
     <string name="not_available">Not Available</string>
+    <string name="please_enter_koin_amount_first">Please enter Koin amount first</string>
 </resources>

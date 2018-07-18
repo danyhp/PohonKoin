@@ -5,28 +5,28 @@
     android:layout_height="match_parent"
     tools:context=".KoinPageActivity">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/footer"
         android:gravity="bottom"
+        android:orientation="vertical"
         android:stretchColumns="*">
 
-        <TableRow
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                style=""
-                android:layout_width="wrap_content"
+                style="@style/TextContent.LabelKoin"
+                android:layout_width="match_parent"
                 android:layout_height="170dp"
-                android:layout_span="2"
+                android:background="@color/colorPrimary"
                 android:gravity="center_vertical"
-                android:text="Please enter Koin amount first"
+                android:text="@string/please_enter_koin_amount_first"
                 android:textAlignment="center"
-                android:textColor="#000"
                 android:textSize="18dp" />
-        </TableRow>
+        </LinearLayout>
 
         <TableRow
             android:layout_width="fill_parent"
@@ -44,51 +44,41 @@
         </TableRow>
 
 
-        <TableRow
+        <LinearLayout
             android:id="@+id/row1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <EditText
+                style="@style/TextContent.LabelKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:height="50dp"
                 android:gravity="center_vertical"
                 android:hint="Amount"
                 android:textAlignment="center"
-                android:textColor="#000"
+                android:textColorHint="@color/colorAccent"
                 android:textSize="16dp" />
 
-            <TextView
+            <Button
+                android:id="@+id/btn_create_qrcode"
+                style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp"
+                android:layout_weight="1"
                 android:height="50dp"
                 android:gravity="center_vertical"
-                android:text="Create QR"
+                android:text="Create QR code"
                 android:textAlignment="center"
-                android:textColor="#000"
                 android:textSize="14dp" />
 
-        </TableRow>
+        </LinearLayout>
 
 
-        <TableRow
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:height="80dp"
-                android:gravity="center_vertical"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16sp" />
-        </TableRow>
-
-
-    </TableLayout>
+    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/footer"

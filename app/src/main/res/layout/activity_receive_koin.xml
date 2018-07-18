@@ -25,11 +25,14 @@
         android:textSize="20sp" />
 
     <Button
+        android:id="@+id/btn_scan_from_gallery"
+        style="@style/TextContent.BtnKoin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="86dp"
+        android:background="@color/colorPrimary"
         android:text="@string/Scan" />
 
 
