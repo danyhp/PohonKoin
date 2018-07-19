@@ -82,6 +82,9 @@
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".TreeQrCode"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".CreateQrCodeToSendKoin"
             android:theme="@style/NoTitleBar"/>
     </application>
 
