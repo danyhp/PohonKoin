@@ -56,12 +56,6 @@
 
         </android.support.design.widget.TextInputLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:layout_margin="5dp"
-            android:background="@color/colorAccent" />
-
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -84,13 +78,13 @@
             android:layout_height="wrap_content">
 
             <EditText
-                android:id="@+id/birthday"
+                android:id="@+id/phone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableEnd="@drawable/ic_calendar"
-                android:drawableStart="@drawable/ic_birthday"
-                android:hint="@string/birthday"
-                android:inputType="textEmailAddress"
+                android:drawableEnd="@drawable/ic_dialpad"
+                android:drawableStart="@drawable/ic_phone"
+                android:hint="@string/phone_number"
+                android:inputType="phone"
                 android:maxLines="1"
                 android:singleLine="true"
                 android:textColor="@android:color/black" />
@@ -121,9 +115,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
-            android:background="@color/colorAccent"
-            android:text="@string/action_sign_in_short"
-            android:textColor="@android:color/black"
+            android:background="@color/colorPrimary"
+            android:text="@string/create_account"
+            android:textColor="@color/colorAccent"
             android:textStyle="bold" />
 
         <!-- Link to Login Screen -->

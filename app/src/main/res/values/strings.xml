@@ -76,4 +76,6 @@
     <string name="username">Username</string>
     <string name="gender">Gender</string>
     <string name="birthday">Birthday</string>
+    <string name="create_account">Create Account</string>
+    <string name="phone_number">Phone Number</string>
 </resources>
