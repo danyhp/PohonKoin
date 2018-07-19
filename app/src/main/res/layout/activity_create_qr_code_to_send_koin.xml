@@ -35,7 +35,7 @@
                 android:text="The QR Code above contains with 100 koins,\nplease use the QR code with caution!"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16sp" />
+                android:textSize="16sp"/>
 
         </TableRow>
 
