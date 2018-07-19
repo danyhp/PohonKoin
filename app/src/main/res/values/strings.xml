@@ -73,4 +73,7 @@
     <string name="btn_sign_out">Sign Out</string>
     <string name="not_available">Not Available</string>
     <string name="please_enter_koin_amount_first">Please enter Koin amount first</string>
+    <string name="username">Username</string>
+    <string name="gender">Gender</string>
+    <string name="birthday">Birthday</string>
 </resources>
