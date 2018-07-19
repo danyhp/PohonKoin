@@ -10,16 +10,16 @@
         android:layout_height="250dp"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
-        android:background="@null" />
+        android:background="@drawable/pohonkoin" />
 
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="140dp"
-        android:stretchColumns="*"
-        android:layout_above="@id/footer">
+        android:stretchColumns="*">
 
 
         <TableRow
@@ -34,7 +34,7 @@
                 android:text="AIRKOIN.COM"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16sp"/>
+                android:textSize="16sp" />
 
         </TableRow>
 
@@ -43,17 +43,15 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:text="QR CODE AVAILABLE UNTIL 05 MARCH 2018"
                 android:height="70dp"
                 android:gravity="center"
-                android:textColor="#000"/>
+                android:text="QR CODE AVAILABLE UNTIL 05 MARCH 2018"
+                android:textColor="#000" />
 
         </TableRow>
 
 
-
     </TableLayout>
-
 
 
     <LinearLayout
