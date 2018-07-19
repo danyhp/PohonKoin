@@ -83,7 +83,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.btn_bulletin:
-                startActivity(new Intent(MainPageActivity.this, BulletinActivity.class));
+                startActivity(new Intent(MainPageActivity.this, MainActivity.class));
                 break;
 
             case R.id.btn_setting:
