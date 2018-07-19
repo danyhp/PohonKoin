@@ -77,6 +77,18 @@
         <activity
             android:name=".QRCodeSendKoinActivity"
             android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".OwnQrCode"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".TreeQrCode"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".CreateQrCodeToSendKoin"
+            android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".BuletinPage"
+            android:theme="@style/NoTitleBar" />
     </application>
 
 </manifest>
