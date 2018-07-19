@@ -76,9 +76,11 @@
     <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/footer"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:gravity="bottom"
-        android:stretchColumns="*">
+        android:stretchColumns="*"
+        android:layout_above="@id/footer">
 
         <TableLayout
             android:layout_width="match_parent"
@@ -90,10 +92,10 @@
                 android:layout_height="wrap_content">
 
                 <TextView
+                    android:height="24dp"
                     android:text="Tree QR Code"
                     android:textAlignment="center"
-                    android:textSize="16sp"
-                    android:height="24dp"/>
+                    android:textSize="16sp" />
 
             </TableRow>
 
@@ -112,28 +114,29 @@
                 android:minHeight="40dp">
 
                 <TextView
-                    android:text="Total"
+                    android:layout_span="1"
                     android:gravity="center"
+                    android:text="Total"
                     android:textAlignment="center"
-                    android:textSize="16sp"
                     android:textColor="#000"
-                    android:layout_span="1"/>
+                    android:textSize="16sp" />
 
                 <TextView
+                    android:layout_span="1"
+                    android:gravity="right"
                     android:text="5,132"
-                    android:gravity="right"
                     android:textColor="#000"
-                    android:textSize="16sp"
-                    android:layout_span="1"/>
+                    android:textSize="16sp" />
 
                 <TextView
-                    android:text="3,414,562"
-                    android:textSize="16sp"
+                    android:layout_span="2"
                     android:gravity="right"
+                    android:text="3,414,562"
                     android:textColor="#000"
-                    android:layout_span="2"/>
+                    android:textSize="16sp" />
 
                 <TextView />
+
                 <TextView />
 
             </TableRow>
