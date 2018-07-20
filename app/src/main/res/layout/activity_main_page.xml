@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/footer"
         android:layout_alignParentTop="true"
+        android:background="@color/primaryLightColor"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
@@ -82,10 +83,10 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
                         android:text="@string/koin_putih_label"
                         android:textAlignment="center"
-                        android:textAllCaps="false" />
+                        android:textAllCaps="false"
+                        android:theme="@style/PrimaryButton" />
 
                     <TextView
                         android:id="@+id/jml_koin_putih"
@@ -93,7 +94,6 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
                         android:text="12,549 Koin"
                         android:textAlignment="center" />
 
@@ -155,54 +155,49 @@
 
                 </LinearLayout>
 
+                <Button
+                    android:id="@+id/btn_merchant_login"
+                    style="@style/TextContent.BtnKoin"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:text="@string/merchant_login_button"
+                    android:theme="@style/PrimaryButton" />
 
+                <LinearLayout
+                    android:id="@+id/menu_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_bulletin"
+                        style="@style/TextContent.BtnKoin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/bulletin_label_button"
+                        android:theme="@style/PrimaryButton" />
+
+                    <Button
+                        android:id="@+id/btn_setting"
+                        style="@style/TextContent.BtnKoin"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/settings_label_button"
+                        android:theme="@style/PrimaryButton" />
+
+                </LinearLayout>
             </LinearLayout>
 
         </ScrollView>
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btn_merchant_login"
-        style="@style/TextContent.BtnKoin"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:layout_above="@id/menu_button"
-
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:text="@string/merchant_login_button" />
-
-    <LinearLayout
-        android:id="@+id/menu_button"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:layout_above="@+id/footer"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@color/colorPrimary"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <Button
-            android:id="@+id/btn_bulletin"
-            style="@style/TextContent.BtnKoin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="@string/bulletin_label_button" />
-
-        <Button
-            android:id="@+id/btn_setting"
-            style="@style/TextContent.BtnKoin"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary"
-            android:text="@string/settings_label_button" />
-
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/footer"
