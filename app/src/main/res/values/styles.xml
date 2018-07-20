@@ -34,7 +34,7 @@
 
     <style name="PrimaryButton" parent="Theme.AppCompat">
         <item name="colorButtonNormal">@color/primaryDarkColor</item>
-        <item name="colorControlHighlight">@color/secondaryLightColor</item>
+        <item name="colorControlHighlight">@color/accentColor</item>
     </style>
 
 </resources>

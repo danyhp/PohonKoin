@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/footer"
         android:layout_alignParentTop="true"
-        android:background="@color/primaryLightColor"
+        android:background="@color/backgroundColor"
         android:gravity="center_horizontal"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
@@ -111,9 +111,9 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
                         android:text="@string/koin_hijau_label"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:theme="@style/PrimaryButton" />
 
                     <TextView
                         android:id="@+id/jml_koin_hijau"
@@ -121,7 +121,7 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
+
                         android:text="@string/not_available"
                         android:textAlignment="center" />
 
@@ -139,9 +139,9 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
                         android:text="@string/koin_merah_label"
-                        android:textAlignment="center" />
+                        android:textAlignment="center"
+                        android:theme="@style/PrimaryButton" />
 
                     <TextView
                         android:id="@+id/jml_koin_merah"
@@ -149,7 +149,6 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:background="@color/colorPrimary"
                         android:text="@string/not_available"
                         android:textAlignment="center" />
 

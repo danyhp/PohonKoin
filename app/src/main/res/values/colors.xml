@@ -19,14 +19,18 @@
     <color name="lbl_name">#333333</color>
     <color name="btn_logut_bg">#ff6861</color>
 
-    <color name="primaryColor">#31c600</color>
-    <color name="primaryLightColor">#72fa4a</color>
-    <color name="primaryDarkColor">#009400</color>
-    <color name="secondaryColor">#6d4c41</color>
-    <color name="secondaryLightColor">#9c786c</color>
-    <color name="secondaryDarkColor">#40241a</color>
+    <color name="primaryColor">#69d111</color>
+    <color name="primaryLightColor">#9fff52</color>
+    <color name="primaryDarkColor">#2c9f00</color>
+    <color name="secondaryColor">#ffee58</color>
+    <color name="secondaryLightColor">#ffff8b</color>
+    <color name="secondaryDarkColor">#c9bc1f</color>
     <color name="primaryTextColor">#000000</color>
-    <color name="secondaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
     <color name="textColorPrimary">#000000</color>
+    <color name="backgroundColor">#F5F5F5</color>
+    <color name="accentColor">#F44336</color>
+
     <color name="text_color_primary">#ffffff</color>
 </resources>
