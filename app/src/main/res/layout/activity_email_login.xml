@@ -84,20 +84,17 @@
                     android:id="@+id/email_sign_in_button"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/login_button_horizontal_margin"
-                    android:layout_marginStart="@dimen/login_button_horizontal_margin"
                     android:layout_marginTop="40dp"
-                    android:background="@color/colorAccent"
                     android:text="@string/action_sign_in"
                     android:textColor="@android:color/black"
-                    android:textStyle="bold" />
+                    android:textStyle="bold"
+                    android:theme="@style/PrimaryButton" />
 
                 <Button
                     android:id="@+id/create_account_button"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/login_button_horizontal_margin"
-                    android:layout_marginStart="@dimen/login_button_horizontal_margin"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/login_button_vertical_margin"
                     android:background="@null"
                     android:text="@string/TXT_CREATE_ACCOUNT"
@@ -107,10 +104,9 @@
 
                 <Button
                     android:id="@+id/forgot_password_button"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="@dimen/login_button_horizontal_margin"
-                    android:layout_marginStart="@dimen/login_button_horizontal_margin"
+                    android:layout_gravity="center"
                     android:layout_marginTop="@dimen/login_button_vertical_margin"
                     android:background="@null"
                     android:text="@string/TXT_FORGOT_PASSWORD"
