@@ -89,6 +89,10 @@
         <activity
             android:name=".BuletinPage"
             android:theme="@style/NoTitleBar" />
+        <activity
+            android:name=".NavigationActivity"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

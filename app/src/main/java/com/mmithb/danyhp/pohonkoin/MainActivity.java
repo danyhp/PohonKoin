@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
      * Creating new user node under 'users'
      */
     private void createUser(String name, String email) {
-        // TODO
+        //
         // In real apps this userId should be fetched
         // by implementing firebase auth
         if (TextUtils.isEmpty(userId)) {

@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MerchantActivity">
 
     <TableLayout
-        android:id="@+id/table_merchant"
+        android:id="@+id/table_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:stretchColumns="*">
+        android:stretchColumns="*"
+        android:visibility="gone">
 
         <TableRow
+            android:id="@+id/row_header"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -61,6 +62,23 @@
 
     </TableLayout>
 
+
+    <TableLayout
+        android:id="@+id/table_merchant"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@id/footer"
+            android:layout_below="@+id/table_header">
+
+
+        </ScrollView>
+
+    </TableLayout>
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"
