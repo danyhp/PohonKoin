@@ -10,75 +10,30 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:stretchColumns="*"
-        android:visibility="gone">
-
-        <TableRow
-            android:id="@+id/row_header"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Merchant Code"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Bank Line"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="@string/WANumber"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Status"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-        </TableRow>
-
-    </TableLayout>
-
-
-    <TableLayout
-        android:id="@+id/table_merchant"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:stretchColumns="*">
 
-        <ScrollView
+        <TableRow
+            android:id="@+id/fixed_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/footer"
-            android:layout_below="@+id/table_header">
-
-
-        </ScrollView>
+            android:layout_height="50dp" />
 
     </TableLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/footer"
+        android:layout_below="@+id/table_header">
+
+        <TableLayout
+            android:id="@+id/table_merchant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+        </TableLayout>
+    </ScrollView>
+
     <LinearLayout
         android:id="@+id/footer"
         android:layout_width="match_parent"

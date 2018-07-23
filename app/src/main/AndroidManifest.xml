@@ -47,14 +47,15 @@
             android:name=".CreateTreeActivity"
             android:theme="@style/NoTitleBar" />
         <activity
+            android:name=".CreatedTreeActivity"
+            android:theme="@style/NoTitleBar" />
+        <activity
             android:name=".ReceiveKoinActivity"
             android:theme="@style/NoTitleBar" />
         <activity
             android:name=".SignupMerchantActivity"
             android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".MerchantActivity"
-            android:theme="@style/NoTitleBar" />
+        <activity android:name=".MerchantActivity" />
         <activity
             android:name=".KoinHistory"
             android:theme="@style/NoTitleBar" />

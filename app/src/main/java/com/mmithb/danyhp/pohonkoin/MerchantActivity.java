@@ -5,6 +5,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -16,7 +17,8 @@ import java.util.ArrayList;
 public class MerchantActivity extends AppCompatActivity {
 
     private TableLayout tableLayout;
-    //    private TableRow rowHeader;
+    private TableLayout tableHeader;
+    private TableRow fixedHeader;
     private Context context;
 
     @Override
@@ -26,13 +28,20 @@ public class MerchantActivity extends AppCompatActivity {
 
         context = this;
         tableLayout = findViewById(R.id.table_merchant);
-//        rowHeader = findViewById(R.id.row_header);
+        tableHeader = findViewById(R.id.table_header);
+        fixedHeader = findViewById(R.id.fixed_header);
+
+        fixedHeader.setBackgroundColor(Color.parseColor("#c0c0c0"));
 
         TableRow rowHeader = new TableRow(context);
         rowHeader.setBackgroundColor(Color.parseColor("#c0c0c0"));
-        rowHeader.setLayoutParams(new TableLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT,
-                TableLayout.LayoutParams.WRAP_CONTENT));
-        String[] headerText = {"Merchant Number", "Bank Line", "WA Number", "Status"};
+        rowHeader.setLayoutParams(new TableRow.LayoutParams(TableRow.LayoutParams.MATCH_PARENT,
+                TableRow.LayoutParams.WRAP_CONTENT));
+
+        ViewGroup.LayoutParams params = rowHeader.getLayoutParams();
+        params.height = 0;
+
+        String[] headerText = {"Merchant ID", "Bank Line", "WA Number", "Status"};
 
         for (String c : headerText) {
             TextView tv = new TextView(this);
@@ -42,6 +51,16 @@ public class MerchantActivity extends AppCompatActivity {
             tv.setTextSize(18);
             tv.setPadding(5, 5, 5, 5);
             tv.setText(c);
+            fixedHeader.addView(tv);
+        }
+
+        for (String c : headerText) {
+            TextView tv = new TextView(this);
+            tv.setGravity(Gravity.CENTER);
+            tv.setTextSize(18);
+            tv.setPadding(5, 5, 5, 5);
+            tv.setText(c);
+            tv.setLayoutParams(params);
             rowHeader.addView(tv);
         }
         tableLayout.addView(rowHeader);
