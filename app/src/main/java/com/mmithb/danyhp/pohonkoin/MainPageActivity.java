@@ -42,6 +42,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
+
         //get firebase auth instance
         auth = FirebaseAuth.getInstance();
 
@@ -51,7 +52,6 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
@@ -89,8 +89,10 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         profileLink = findViewById(R.id.ll_profile);
         profileLink.setOnClickListener(this);
 
-        emailTxt = findViewById(R.id.txt_email);
-        nameTxt = findViewById(R.id.txt_name);
+        View headerView = navigationView.getHeaderView(0);
+
+        emailTxt = headerView.findViewById(R.id.emailTextView);
+        nameTxt = headerView.findViewById(R.id.nameTextView);
 
         emailTxt.setText(user.getEmail());
 
