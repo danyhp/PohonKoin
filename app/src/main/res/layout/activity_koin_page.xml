@@ -39,57 +39,65 @@
             <Button
                 android:id="@+id/btn_send_koin"
                 style="@style/TextContent.BtnKoin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="0dp"
+                android:layout_height="137dp"
                 android:height="50dp"
+                android:drawableTop="@drawable/sendcoin"
                 android:gravity="center_vertical"
                 android:text="Send Koin"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16dp" />
+                android:textSize="16sp"
+                android:background="@null"/>
 
             <Button
                 android:id="@+id/btn_receive_koin"
                 style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:height="50dp"
+                android:drawableTop="@drawable/receivecoin"
                 android:gravity="center_vertical"
                 android:text="Receive Koin"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:background="@null"/>
 
         </TableRow>
 
         <TableRow
             android:id="@+id/row1"
-            android:layout_width="fill_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
             <Button
                 android:id="@+id/btn_create_tree"
                 style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="140dp"
                 android:height="50dp"
+                android:drawableTop="@drawable/createtree"
                 android:gravity="center_vertical"
                 android:text="Create Tree"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:background="@null"/>
 
             <Button
                 android:id="@+id/btn_created_tree"
                 style="@style/TextContent.BtnKoin"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="140dp"
                 android:height="50dp"
+                android:drawableTop="@drawable/createdtree"
                 android:gravity="center_vertical"
                 android:text="Created Tree"
                 android:textAlignment="center"
                 android:textColor="#000"
-                android:textSize="16dp" />
+                android:textSize="16dp"
+                android:background="@null"/>
 
         </TableRow>
 
