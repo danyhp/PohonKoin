@@ -30,35 +30,69 @@
         <activity
             android:name=".GoogleLoginActivity"
             android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".MerchantLoginActivity"
-            android:theme="@style/NoTitleBar"
-            android:windowSoftInputMode="adjustPan" />
+
         <activity
             android:name=".MainPageActivity"
             android:theme="@style/NoTitleBar" />
         <activity
-            android:name=".KoinPageActivity"
-            android:theme="@style/NoTitleBar" />
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".MainPageActivity" />
         <activity
-            android:name=".SendKoinActivity"
-            android:theme="@style/NoTitleBar" />
+            android:name=".BulletinActivity"
+            android:label="@string/title_activity_bulletin"
+            android:parentActivityName=".MainPageActivity" />
         <activity
-            android:name=".CreateTreeActivity"
-            android:theme="@style/NoTitleBar" />
+            android:name=".BulletinPageActivity"
+            android:label="@string/title_activity_bulletin"
+            android:parentActivityName=".MainPageActivity" />
+
         <activity
-            android:name=".CreatedTreeActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".ReceiveKoinActivity"
-            android:theme="@style/NoTitleBar" />
+            android:name=".MerchantLoginActivity"
+            android:parentActivityName=".MainPageActivity"
+            android:theme="@style/NoTitleBar"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".SignupMerchantActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity android:name=".MerchantActivity" />
+            android:label="@string/title_activity_merchant_signup"
+            android:parentActivityName=".MerchantLoginActivity" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/title_activity_account_profile"
+            android:parentActivityName=".MainPageActivity" />
+
+
+        <activity
+            android:name=".KoinPageActivity"
+            android:label="@string/title_activity_koin_page"
+            android:parentActivityName=".MainPageActivity" />
+
+        <activity
+            android:name=".SendKoinActivity"
+            android:label="@string/title_activity_send_koin"
+            android:parentActivityName=".KoinPageActivity" />
+        <activity
+            android:name=".CreateTreeActivity"
+            android:label="@string/title_activity_create_tree"
+            android:parentActivityName=".KoinPageActivity" />
+        <activity
+            android:name=".CreatedTreeActivity"
+            android:label="@string/title_activity_created_tree"
+            android:parentActivityName=".KoinPageActivity" />
+        <activity
+            android:name=".ReceiveKoinActivity"
+            android:label="@string/title_activity_receive_koin"
+            android:parentActivityName=".KoinPageActivity" />
+        <activity
+            android:name=".MerchantActivity"
+            android:parentActivityName=".KoinPageActivity" />
         <activity
             android:name=".KoinHistory"
-            android:theme="@style/NoTitleBar" />
+            android:label="@string/title_activity_koin_history"
+            android:parentActivityName=".KoinPageActivity" />
+
+
         <activity
             android:name=".CreateAccountActivity"
             android:theme="@style/NoTitleBar" />
@@ -66,15 +100,8 @@
             android:name=".ResetPasswordActivity"
             android:theme="@style/NoTitleBar"
             android:windowSoftInputMode="adjustPan" />
-        <activity
-            android:name=".ProfileActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".BulletinActivity"
-            android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".SettingsActivity"
-            android:theme="@style/NoTitleBar" />
+
+
         <activity
             android:name=".QRCodeSendKoinActivity"
             android:theme="@style/NoTitleBar" />
@@ -87,13 +114,11 @@
         <activity
             android:name=".CreateQrCodeToSendKoin"
             android:theme="@style/NoTitleBar" />
-        <activity
-            android:name=".BuletinPage"
-            android:theme="@style/NoTitleBar" />
+
         <activity
             android:name=".NavigationActivity"
             android:label="@string/title_activity_navigation"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>
