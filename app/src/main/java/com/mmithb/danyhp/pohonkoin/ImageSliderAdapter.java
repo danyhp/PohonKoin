@@ -11,9 +11,9 @@ import android.widget.ImageView;
 public class ImageSliderAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater inflater;
-    private static final Integer [] images = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};private static int currentPage = 0;
+    private static final Integer[] images = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};
 
-    public ImageSliderAdapter(Context context){
+    public ImageSliderAdapter(Context context) {
         this.context = context;
     }
 
@@ -27,10 +27,10 @@ public class ImageSliderAdapter extends PagerAdapter {
         return view == object;
     }
 
-    public Object instantiateItem(ViewGroup container, int position){
-        inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    public Object instantiateItem(ViewGroup container, int position) {
+        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.sliding, null);
-        ImageView iv = (ImageView)view.findViewById(R.id.gambar_penginapan);
+        ImageView iv = (ImageView) view.findViewById(R.id.gambar_penginapan);
         iv.setImageResource(images[position]);
 
         ViewPager vp = (ViewPager) container;
@@ -38,7 +38,7 @@ public class ImageSliderAdapter extends PagerAdapter {
         return view;
     }
 
-    public void destroyItem(ViewGroup container, int position, Object object){
+    public void destroyItem(ViewGroup container, int position, Object object) {
         ViewPager vp = (ViewPager) container;
         View view = (View) object;
         vp.removeView(view);
