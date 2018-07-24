@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -25,6 +26,8 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
     private LinearLayout profileLink;
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authListener;
+
+    ViewPager promot;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,15 +89,17 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         settingBtn = findViewById(R.id.btn_setting);
         settingBtn.setOnClickListener(this);
 
-        profileLink = findViewById(R.id.ll_profile);
-        profileLink.setOnClickListener(this);
-
         View headerView = navigationView.getHeaderView(0);
 
         emailTxt = headerView.findViewById(R.id.emailTextView);
         nameTxt = headerView.findViewById(R.id.nameTextView);
 
         emailTxt.setText(user.getEmail());
+
+        //Mengatur slide image
+        promot = findViewById(R.id.slide_promotion);
+        final ImageSliderAdapter adapter = new ImageSliderAdapter(this);
+        promot.setAdapter(adapter);
 
 
     }
