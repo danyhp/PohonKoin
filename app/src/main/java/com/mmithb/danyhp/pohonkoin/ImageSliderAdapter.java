@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class ImageSliderAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater inflater;
-    private Integer [] images = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};
+    private static final Integer [] images = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};private static int currentPage = 0;
 
     public ImageSliderAdapter(Context context){
         this.context = context;

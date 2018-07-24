@@ -23,7 +23,6 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
     private TextView koinPutihValue, koinHijauValue, koinMerahValue, emailTxt, nameTxt;
     private Button bulletinBtn, settingBtn, merchantBtn, koinPutihBtn, koinHijauBtn, koinMerahBtn;
-    private LinearLayout profileLink;
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authListener;
 
@@ -55,7 +54,6 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         authListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
-                FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user == null) {
                     // user auth state is changed - user is null
                     // launch login activity
@@ -186,17 +184,6 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
             default:
                 break;
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        auth.addAuthStateListener(authListener);
     }
 
     @Override
