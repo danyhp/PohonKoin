@@ -67,7 +67,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                     return;
                 }
 
-//                progressBar.setVisibility(View.VISIBLE);
+
                 progressDialog.setMessage("Please Wait");
                 progressDialog.show();
                 //create user
@@ -76,7 +76,7 @@ public class CreateAccountActivity extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 Toast.makeText(CreateAccountActivity.this, "createUserWithEmail:onComplete:" + task.isSuccessful(), Toast.LENGTH_SHORT).show();
-//                                progressBar.setVisibility(View.GONE);
+
                                 progressDialog.dismiss();
                                 // If sign in fails, display a message to the user. If sign in succeeds
                                 // the auth state listener will be notified and logic to handle the
@@ -98,7 +98,6 @@ public class CreateAccountActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-//        progressBar.setVisibility(View.GONE);
         progressDialog.dismiss();
     }
 }
