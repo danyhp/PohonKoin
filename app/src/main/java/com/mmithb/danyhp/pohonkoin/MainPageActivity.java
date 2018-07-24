@@ -87,7 +87,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
                 break;
 
             case R.id.btn_setting:
-                startActivity(new Intent(MainPageActivity.this, SettingsActivity.class));
+                startActivity(new Intent(MainPageActivity.this, NavigationActivity.class));
                 break;
 
             case R.id.ll_profile:
