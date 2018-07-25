@@ -7,7 +7,7 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="205dp"
+        android:layout_height="225dp"
         android:scaleType="centerCrop"
         android:src="@drawable/cointree1"
         android:adjustViewBounds="true"
