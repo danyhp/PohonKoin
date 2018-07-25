@@ -2,6 +2,7 @@ package com.mmithb.danyhp.pohonkoin;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,6 +19,12 @@ import android.widget.TextView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import java.util.ArrayList;
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
+
 public class MainPageActivity extends AppCompatActivity implements View.OnClickListener, NavigationView.OnNavigationItemSelectedListener {
 
     private TextView koinPutihValue, koinHijauValue, koinMerahValue, emailTxt, nameTxt;
@@ -25,12 +32,19 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
     private FirebaseAuth auth;
     private FirebaseAuth.AuthStateListener authListener;
 
-    ViewPager promot;
+    private static ViewPager mPager;
+    private static int currentPage = 0;
+    private static final Integer[] XMEN= {R.drawable.cointree1,R.drawable.cointree2,R.drawable.cointree3};
+    private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
+        init();
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -93,12 +107,6 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         nameTxt = headerView.findViewById(R.id.nameTextView);
 
         emailTxt.setText(user.getEmail());
-
-        //Mengatur slide image
-        promot = findViewById(R.id.slide_promotion);
-        final ImageSliderAdapter adapter = new ImageSliderAdapter(this);
-        promot.setAdapter(adapter);
-
 
     }
 
@@ -196,5 +204,33 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
     //sign out method
     public void signOut() {
         auth.signOut();
+    }
+
+    private void init() {
+        for(int i=0;i<XMEN.length;i++)
+            XMENArray.add(XMEN[i]);
+
+        mPager = (ViewPager) findViewById(R.id.pager);
+        mPager.setAdapter(new ImageSliderAdapter(MainPageActivity.this,XMENArray));
+        CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
+        indicator.setViewPager(mPager);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == XMEN.length) {
+                    currentPage = 0;
+                }
+                mPager.setCurrentItem(currentPage++, true);
+            }
+        };
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, 3000, 3000);
     }
 }

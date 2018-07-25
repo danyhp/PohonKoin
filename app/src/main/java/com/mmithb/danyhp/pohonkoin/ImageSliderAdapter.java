@@ -2,45 +2,49 @@ package com.mmithb.danyhp.pohonkoin;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
-import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-public class ImageSliderAdapter extends PagerAdapter {
-    private Context context;
-    private LayoutInflater inflater;
-    private static final Integer[] images = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};
+import java.util.ArrayList;
 
-    public ImageSliderAdapter(Context context) {
+public class ImageSliderAdapter extends PagerAdapter {
+
+    private ArrayList<Integer> images;
+    private LayoutInflater inflater;
+    private Context context;
+
+    public ImageSliderAdapter (Context context, ArrayList<Integer> images) {
         this.context = context;
+        this.images=images;
+        inflater = LayoutInflater.from(context);
+    }
+
+    @Override
+    public void destroyItem(ViewGroup container, int position, Object object) {
+        container.removeView((View) object);
     }
 
     @Override
     public int getCount() {
-        return images.length;
+        return images.size();
+    }
+
+    @Override
+    public Object instantiateItem(ViewGroup view, int position) {
+        View myImageLayout = inflater.inflate(R.layout.sliding, view, false);
+        ImageView myImage = (ImageView) myImageLayout
+                .findViewById(R.id.image);
+        myImage.setImageResource(images.get(position));
+        view.addView(myImageLayout, 0);
+        return myImageLayout;
     }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {
-        return view == object;
-    }
-
-    public Object instantiateItem(ViewGroup container, int position) {
-        inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = inflater.inflate(R.layout.sliding, null);
-        ImageView iv = view.findViewById(R.id.gambar_penginapan);
-        iv.setImageResource(images[position]);
-
-        ViewPager vp = (ViewPager) container;
-        vp.addView(view, 0);
-        return view;
-    }
-
-    public void destroyItem(ViewGroup container, int position, Object object) {
-        ViewPager vp = (ViewPager) container;
-        View view = (View) object;
-        vp.removeView(view);
+        return view.equals(object);
     }
 }
+
+
