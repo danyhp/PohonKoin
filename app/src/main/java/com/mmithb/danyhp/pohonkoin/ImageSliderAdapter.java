@@ -30,7 +30,7 @@ public class ImageSliderAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = inflater.inflate(R.layout.sliding, null);
-        ImageView iv = (ImageView) view.findViewById(R.id.gambar_penginapan);
+        ImageView iv = view.findViewById(R.id.gambar_penginapan);
         iv.setImageResource(images[position]);
 
         ViewPager vp = (ViewPager) container;
