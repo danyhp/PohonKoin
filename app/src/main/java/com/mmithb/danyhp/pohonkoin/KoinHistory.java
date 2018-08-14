@@ -1,7 +1,7 @@
 package com.mmithb.danyhp.pohonkoin;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 
 public class KoinHistory extends AppCompatActivity {
 
@@ -10,4 +10,6 @@ public class KoinHistory extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koin_history);
     }
+
+    // TODO: TABLE LAYOUT KOIN HISTORY
 }
