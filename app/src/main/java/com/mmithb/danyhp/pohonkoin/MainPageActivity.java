@@ -147,7 +147,7 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
         } else if (id == R.id.nav_bulletin) {
             startActivity(new Intent(MainPageActivity.this, BulletinPageActivity.class));
         } else if (id == R.id.nav_settings) {
-            startActivity(new Intent(MainPageActivity.this, NavigationActivity.class));
+            startActivity(new Intent(MainPageActivity.this, SettingsActivity.class));
         } else if (id == R.id.nav_logout) {
             signOut();
         }
