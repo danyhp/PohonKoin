@@ -34,9 +34,8 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
 
     private static ViewPager mPager;
     private static int currentPage = 0;
-    private static final Integer[] XMEN= {R.drawable.cointree1,R.drawable.cointree2,R.drawable.cointree3};
+    private static final Integer[] XMEN = {R.drawable.cointree1, R.drawable.cointree2, R.drawable.cointree3};
     private ArrayList<Integer> XMENArray = new ArrayList<Integer>();
-
 
 
     @Override
@@ -176,21 +175,15 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(new Intent(MainPageActivity.this, MerchantLoginActivity.class));
                 break;
 
-//            case R.id.btn_bulletin:
-//
-//                break;
-//
-//            case R.id.btn_setting:
-//
-//                break;
-//
-//            case R.id.ll_profile:
-//
-//                break;
-
             default:
                 break;
         }
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        auth.addAuthStateListener(authListener);
     }
 
     @Override
@@ -204,14 +197,17 @@ public class MainPageActivity extends AppCompatActivity implements View.OnClickL
     //sign out method
     public void signOut() {
         auth.signOut();
+        finish();
+        Intent intent = new Intent(MainPageActivity.this, EmailLoginActivity.class);
+        startActivity(intent);
     }
 
     private void init() {
-        for(int i=0;i<XMEN.length;i++)
+        for (int i = 0; i < XMEN.length; i++)
             XMENArray.add(XMEN[i]);
 
         mPager = (ViewPager) findViewById(R.id.pager);
-        mPager.setAdapter(new ImageSliderAdapter(MainPageActivity.this,XMENArray));
+        mPager.setAdapter(new ImageSliderAdapter(MainPageActivity.this, XMENArray));
         CircleIndicator indicator = (CircleIndicator) findViewById(R.id.indicator);
         indicator.setViewPager(mPager);
 

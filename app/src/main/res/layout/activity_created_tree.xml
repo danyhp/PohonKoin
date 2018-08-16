@@ -6,67 +6,40 @@
     tools:context=".KoinPageActivity">
 
     <TableLayout
-        android:id="@+id/table_koin"
+        android:id="@+id/table_header"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:stretchColumns="*">
 
         <TableRow
+            android:id="@+id/fixed_header"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Tree Code"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Remaining Hours"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Collected Koin"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:height="50dp"
-                android:gravity="center_vertical"
-                android:text="Status"
-                android:textAlignment="center"
-                android:textColor="#000"
-                android:textSize="16dp" />
-
-        </TableRow>
+            android:layout_height="50dp" />
 
     </TableLayout>
 
+    <ScrollView
+        android:id="@+id/table_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/total_koin_display"
+        android:layout_below="@+id/table_header">
+
+        <TableLayout
+            android:id="@+id/table_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="*">
+
+        </TableLayout>
+    </ScrollView>
 
     <TableLayout
         android:id="@+id/total_koin_display"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_above="@id/footer"
-        android:layout_below="@id/table_koin"
         android:gravity="bottom"
         android:stretchColumns="*">
 
